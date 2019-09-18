@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ReusableLineGraph" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vLL-FS-iX5" customClass="PLineChartView" customModule="ReusableLineGraph" customModuleProvider="target">
+                                <rect key="frame" x="135" y="552" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="2gP-CW-2VP"/>
+                                    <constraint firstAttribute="width" constant="240" id="v7o-7c-CMS"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtq-42-gYp" customClass="PLineChartView" customModule="ReusableLineGraph">
+                                <rect key="frame" x="145" y="89" width="124" height="78"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQT-pC-Zx3" customClass="PLineChartView" customModule="ReusableLineGraph" customModuleProvider="target">
+                                <rect key="frame" x="60.5" y="351" width="293" height="193"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vLL-FS-iX5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="135" id="1Ns-XD-Eqp"/>
+                            <constraint firstItem="rtq-42-gYp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2lY-Pd-pTO"/>
+                            <constraint firstItem="MQT-pC-Zx3" firstAttribute="top" secondItem="rtq-42-gYp" secondAttribute="bottom" constant="184" id="5BH-Yu-UDE"/>
+                            <constraint firstItem="vLL-FS-iX5" firstAttribute="top" secondItem="rtq-42-gYp" secondAttribute="bottom" constant="385" id="ADj-Rf-aM4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vLL-FS-iX5" secondAttribute="bottom" constant="182" id="GQ3-Yw-C8i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rtq-42-gYp" secondAttribute="trailing" constant="145" id="Hjt-8P-qaT"/>
+                            <constraint firstItem="MQT-pC-Zx3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60.5" id="Nfy-8R-RDd"/>
+                            <constraint firstItem="rtq-42-gYp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="145" id="OaD-oA-Ffl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vLL-FS-iX5" secondAttribute="trailing" constant="39" id="RIY-Nk-33r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MQT-pC-Zx3" secondAttribute="trailing" constant="60.5" id="SL4-vf-wK2"/>
+                            <constraint firstItem="vLL-FS-iX5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="508" id="StK-TN-7yW"/>
+                            <constraint firstItem="vLL-FS-iX5" firstAttribute="top" secondItem="MQT-pC-Zx3" secondAttribute="bottom" constant="8" id="d5D-2Q-gr3"/>
+                            <constraint firstItem="rtq-42-gYp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="n7H-pl-jrD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="anotherSpecialView" destination="rtq-42-gYp" id="e1a-ZK-W9i"/>
+                        <outlet property="myView" destination="MQT-pC-Zx3" id="VCv-a6-VgD"/>
+                        <outlet property="specialView" destination="vLL-FS-iX5" id="ZEc-r0-34Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="40.848214285714285"/>
+        </scene>
+    </scenes>
+</document>
